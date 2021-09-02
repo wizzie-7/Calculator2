@@ -3,7 +3,7 @@
 
 namespace Calculator2
 {
-    public class Addition
+    public class CalculatorOperations
     {
         public double Add(double num1, double num2)
         {
@@ -11,27 +11,22 @@ namespace Calculator2
             Console.WriteLine("Addition is = " + res);
             return res;
         }
-    }
-    public class Substraction
-    {
+    
+    
         public double subs(double num1, double num2)
         {
             double res = num1 - num2;
             Console.WriteLine("Substraction is = " + res);
             return res;
         }
-    }
-    public class Multiplication
-    {
+    
         public double mult(double num1, double num2)
         {
             double res = num1 * num2;
             Console.WriteLine("Multiplication is = " + res);
             return res;
         }
-    }
-    public class Division
-    {
+    
         public double Divi(double num1, double num2)
         {
             double res = num1 / num2;
@@ -40,9 +35,7 @@ namespace Calculator2
             Console.WriteLine("Reminder is = " + mod);
             return res;
         }
-    }
-    public class Qual
-    {
+    
         public void eqa(double num1, double num2)
         {
             if (num1 == num2)
@@ -54,9 +47,7 @@ namespace Calculator2
                 Console.WriteLine(num1 + " is not eqaul to " + num2);
             }
         }
-    }
-    public class Greater
-    {
+    
         public void great(double num1, double num2)
         {
             if (num1 > num2)
@@ -76,14 +67,10 @@ namespace Calculator2
             double a;
             double b;
 
-            Addition ad = new Addition();
-            Substraction sub = new Substraction();
-            Multiplication mul = new Multiplication();
-            Division div = new Division();
-            Qual eq = new Qual();
-            Greater gr = new Greater();
+            CalculatorOperations CO = new CalculatorOperations();
 
-            
+
+
             char conf;
 
             do
@@ -106,7 +93,7 @@ namespace Calculator2
                             a = Convert.ToDouble(Console.ReadLine());
                             Console.WriteLine("Enter numbers2  :");
                             b = Convert.ToDouble(Console.ReadLine());
-                            ad.Add(a, b);
+                            CO.Add(a, b);
                             Console.WriteLine("For continue press Y for cancle press N");
                             conf = Convert.ToChar(Console.ReadLine());
                             break;
@@ -117,7 +104,7 @@ namespace Calculator2
                             a = Convert.ToDouble(Console.ReadLine());
                             Console.WriteLine("Enter numbers2  :");
                             b = Convert.ToDouble(Console.ReadLine());
-                            sub.subs(a, b);
+                            CO.subs(a, b);
                             Console.WriteLine("For continue press Y for cancle press N");
                             conf = Convert.ToChar(Console.ReadLine());
                             break;
@@ -128,7 +115,7 @@ namespace Calculator2
                             a = Convert.ToDouble(Console.ReadLine());
                             Console.WriteLine("Enter numbers2  :");
                             b = Convert.ToDouble(Console.ReadLine());
-                            mul.mult(a, b);
+                            CO.mult(a, b);
                             Console.WriteLine("For continue press Y for cancle press N");
                             conf = Convert.ToChar(Console.ReadLine());
                             break;
@@ -139,7 +126,7 @@ namespace Calculator2
                             a = Convert.ToDouble(Console.ReadLine());
                             Console.WriteLine("Enter numbers2  :");
                             b = Convert.ToDouble(Console.ReadLine());
-                            div.Divi(a, b);
+                            CO.Divi(a, b);
                             Console.WriteLine("For continue press Y for cancle press N");
                             conf = Convert.ToChar(Console.ReadLine());
                             break;
@@ -150,7 +137,7 @@ namespace Calculator2
                             a = Convert.ToDouble(Console.ReadLine());
                             Console.WriteLine("Enter numbers2  :");
                             b = Convert.ToDouble(Console.ReadLine());
-                            eq.eqa(a, b);
+                            CO.eqa(a, b);
                             Console.WriteLine("For continue press Y for cancle press N");
                             conf = Convert.ToChar(Console.ReadLine());
                             break;
@@ -161,7 +148,7 @@ namespace Calculator2
                             a = Convert.ToDouble(Console.ReadLine());
                             Console.WriteLine("Enter numbers2  :");
                             b = Convert.ToDouble(Console.ReadLine());
-                            gr.great(a, b);
+                            CO.great(a, b);
                             Console.WriteLine("For continue press Y for cancle press N");
                             conf = Convert.ToChar(Console.ReadLine());
                             break;
